@@ -15,14 +15,14 @@ class EMPLOYEE{
 		it=(float)0.3*gross_sal;
 		net_sal=gross_sal-it;
 	}
-	void display(){
+	void display(int i){
 		System.out.println("Employee name: "+ename);
 		System.out.println("Employee id "+eid);
 		System.out.println("Employee Basic: "+basic);
 		System.out.println("Employee Da: "+da);
 		System.out.println("Employee gross sal: "+gross_sal);
-		System.out.println("Employee Net_Sal: "+net_sal);
 		System.out.println("Employee IT: "+it);
+		System.out.println("Employee Net_Sal: "+net_sal);
 	}
 	public static void main(String[] args){
 		EMPLOYEE e = new EMPLOYEE();
@@ -31,6 +31,7 @@ class EMPLOYEE{
 		System.out.println("Enter no. of employees:");
 		n=s.nextInt();
 		for(int i=0;i<n;i++){
+			System.out.println("Employee "+(i+1));
 			System.out.print("Enter employee name:");
 			String garb = s.nextLine();
 			String name = s.nextLine();
@@ -40,7 +41,7 @@ class EMPLOYEE{
 			float Bas = s.nextFloat();
 			e.read(name,id,Bas);
 			e.compute_net_sal();
-			e.display();
+			e.display(i);
 		}
 	}
 }

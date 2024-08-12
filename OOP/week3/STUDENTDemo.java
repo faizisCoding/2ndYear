@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.*;
-
 class STUDENT{
 	String sname;
 	float[] marks_array=new float[10];
