@@ -49,7 +49,7 @@ class BANK{
 		BANK b1 = new BANK();
 		Scanner s = new Scanner(System.in);
 		Random rand = new Random();
-		int accNum=rand.nextInt(1000000);
+		int accNum=rand.nextInt(10000);
 
 		System.out.print("Enter name:");
 		String accName=s.nextLine();
@@ -60,7 +60,7 @@ class BANK{
 		System.out.print("Enter deposit amount:");
 		float dep = s.nextFloat();
 		float roi;
-		if(accTy=="Current")
+		if(accTy.equals("Current"))
 			roi=3;
 		else
 			roi=(float)1.5;
@@ -72,3 +72,21 @@ class BANK{
 		b2.withdraw(w);
 	}
 }
+
+/* OUTPUT
+Name of the depositor: No name
+Account number: 0
+Account Type: No Type
+Balance: 0.0
+Rate of Interest: 0.0
+Enter name:ABC
+Enter acc type(Current/Savings):Current
+Enter deposit amount:12000
+Name of the depositor: ABC
+Account number: 8910
+Account Type: Current
+Balance: 12000.0
+Rate of Interest: 1.5
+Enter withdrawal amount:12
+Balance after withdrawal: 11988.0
+ */

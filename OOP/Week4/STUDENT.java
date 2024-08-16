@@ -14,7 +14,7 @@ class STUDENT{
         display(id,name);
     }
     void display(int i,String str){
-    	System.out.println("The values are "+i+","+str);
+    	System.out.println("The values are "+i+", "+str);
     }
     public static void main(String[] args){
     	STUDENT s1 = new STUDENT();
@@ -26,3 +26,14 @@ class STUDENT{
         STUDENT s2 = new STUDENT(i,name);
     }
 }
+
+/* OUTPUT
+inside default constructor
+The values are 0, No Name
+Enter Student name:
+abc
+Enter Student id:
+1234
+inside parameterized constructor
+The values are 1234, abc
+ */

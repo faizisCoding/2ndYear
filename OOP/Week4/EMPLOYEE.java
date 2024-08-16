@@ -1,5 +1,5 @@
-import java.io.*;
-//import java.util.*;
+//import java.io.*;
+import java.util.*;
 class EMPLOYEE{
 	String Ename = "No Name";
 	int Esalary = 0;
@@ -27,3 +27,14 @@ class EMPLOYEE{
     }
 
 }
+
+/* OUTPUT
+inside default constructor
+The values are 0,No Name
+Enter EMPLOYEE name:
+abc
+Enter EMPLOYEE Salary:
+1200
+inside parameterized constructor
+The values are 1200,abc
+ */
