@@ -14,3 +14,7 @@ Counter(){ count++; }
         Counter.showCount(); //displaying no. of objects created 
     }
 }
+/* OUTPUT:
+Enter number of objects: 5
+No. of objects created = 5
+ */
