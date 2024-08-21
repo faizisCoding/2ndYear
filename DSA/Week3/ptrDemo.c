@@ -20,6 +20,6 @@ int main(){
     return 0;
 }
 /* OUTPUT:
-1 value stored at address of p
+1 value stored at address of p.
 1 Value pointed by p pointer which is pointed to by ptr pointer.
 New value is 10 pointed to by pointer at q which was returned by the function.*/

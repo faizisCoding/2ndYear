@@ -25,13 +25,15 @@ void freeMat(int **matrix,int r) {
     }
     free(matrix);
 }
-void readMat(int m,int n,int **mat){
-	printf("Enter matrix elements:");
-	for(int i=0;i<m;i++){
-		for(int j=0;j<n;j++)
-			scanf("%d",*(*(mat+i)+j);
-	}
+void readMat(int **mat,int m,int n){
+    printf("Enter matrix elements:\n");
+    for(int i=0;i<m;i++){
+        for(int j=0;j<n;j++){
+            scanf("%d",(*(mat+i)+j));
+        }
+    }
 }
+
 void displayMat(int **mat,int m,int n){
 	for(int i=0;i<m;i++){
 		for(int j=0;j<n;j++){
@@ -40,15 +42,15 @@ void displayMat(int **mat,int m,int n){
 		printf("\n");
 	}
 }
-int** multiplyMatrices(int **mat1,int **mat2,int r1,int c1,int c2) {
-    int **product=allocateMat(r1, c2);
+int** multiplyMat(int **mat1,int **mat2,int r1,int c1,int c2) {
+    int **product=allocateMat(r1,c2);
     if(product==NULL){
         return NULL;
     }
     for(int i=0;i<r1;i++){
         for(int j=0;j<c2;j++){
             *(*(product+i)+j)=0;
-            for(int k=0;k<c1;k++) {
+            for(int k=0;k<c1;k++){
                 *(*(product+i)+j)+=*(*(mat1+i)+k) * *(*(mat2+k)+j);
             }
         }
@@ -90,7 +92,7 @@ int main(){
     printf("Product of the matrices:\n");
     displayMat(product,m1,n2);
     freeMat(mat1,m1);
-    freeMat(mat2,n2);
+    freeMat(mat2,m2);
     freeMat(product,m1);
     return 0;
 }
